@@ -25,9 +25,10 @@
             #cd53a5 72%,
             #ff9c8d 100%);
     --gradient-p2: linear-gradient(90deg,
-            #3b049e 14.48%,
-            #6304a1 57.73%,
-            #9c08a3 99.98%);
+            #e038cb 15%,
+            #6035d1 57%,
+
+            #4334c3 99.98%);
     --gradient-p3: linear-gradient(180deg,
             rgba(255, 255, 255, 0.3) 30.72%,
             rgba(153, 153, 153, 0) 73.45%);
@@ -530,7 +531,7 @@ body {
     font-weight: 400;
     overflow-x: hidden;
     position: relative;
-    cursor: url('data: image/svg+xml; base64, PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBMaWNlbnNlOiBNSVQuIE1hZGUgYnkgYXJ0Y29ob2xpYzogaHR0cHM6Ly9naXRodWIuY29tL2FydGNvaG9saWMvYWthci1pY29ucyAtLT4KPHN2ZyB3aWR0aD0iMS41cmVtIiBoZWlnaHQ9ImF1dG8iIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIyIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTMgM0wxMCAyMkwxMi4wNTEzIDE1Ljg0NjFDMTIuNjQ4NSAxNC4wNTQ0IDE0LjA1NDQgMTIuNjQ4NSAxNS44NDYgMTIuMDUxM0wyMiAxMEwzIDNaIiAvPgo8L3N2Zz4KCg=='), auto;
+
 }
 
 
@@ -2053,6 +2054,58 @@ html {
     /* Higher z-index value ensures it is above other content */
 }
 
+
+
+.gradient_container {
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    animation: rtt 40s linear infinite;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+@keyframes rtt {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.box {
+    z-index: 0;
+    width: 50%;
+    height: 50%;
+    filter: blur(140px);
+    opacity: 70%;
+}
+
+.box:nth-child(1) {
+    background: #6035d1;
+}
+
+.box:nth-child(2) {
+    background: #8d36d1;
+}
+
+.box:nth-child(3) {
+    background: #4334c3;
+}
+
+.box:nth-child(4) {
+    background: #e038cb;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
 @media (max-width: 991.98px) {
     .navbar-custom {
         position: fixed;
@@ -2062,8 +2115,7 @@ html {
         /* Stick to the top */
         left: 0;
         z-index: 10;
-        background-color: #060919;
-        /* Even higher z-index for mobile */
+
     }
 
     /* Make sure the content below the header doesn't go under it */
@@ -2715,7 +2767,7 @@ html {
             #fafafa 90%,
             #00eaff 100%);
     background-size: 400% 400%;
-    animation: comingSoon 20s linear infinite forwards;
+    animation: comingSoon 60s linear infinite forwards;
 }
 
 .premium-features .single-box {
