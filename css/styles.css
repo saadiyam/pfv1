@@ -2244,7 +2244,7 @@ html {
 
 @media (max-width: 991px) {
     .header-section .main-navbar .custom-nav {
-
+        text-align: center;
         width: 100%;
     }
 
