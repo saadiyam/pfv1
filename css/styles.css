@@ -24,7 +24,7 @@
             #5740ad 7.79%,
             #cd53a5 72%,
             #ff9c8d 100%);
-    --gradient-p2: linear-gradient(90deg,
+    --gradient-p2: linear-gradient(120deg,
             #e038cb 15%,
             #6035d1 57%,
 
@@ -474,6 +474,19 @@ li {
     .display-ex-three {
         font-size: 160px;
     }
+
+    .about-counter-area img {
+        max-width: 60%;
+    }
+}
+
+
+@media (max-width: 445px) {
+    .card-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 1rem !important;
+    }
 }
 
 @media (max-width: 575px) {
@@ -850,6 +863,7 @@ select {
     background: var(--gradient-p2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
+    font-weight: 700;
 }
 
 .text-gradient.second {
@@ -920,6 +934,22 @@ select {
         min-width: 60px;
         height: 60px;
     }
+
+    .top-area {
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+    }
+
+    #introduction img {
+        max-width: 80%;
+    }
+
+    #introduction .col-12 {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
 }
 
 .btn-popup-animation:before {
@@ -1090,6 +1120,56 @@ select {
 
 .buttons .btn:hover {
     background-color: #ddd;
+    color: #000;
+    transition: ease-in-out;
+}
+
+
+
+
+
+
+.gradient-border {
+    position: relative;
+    border-radius: 50px;
+    background-color: #060919;
+}
+
+.gradient-border:hover {
+
+    background-color: transparent;
+    transition: ease-in-out;
+}
+
+.gradient-border:after {
+
+    content: '';
+    position: absolute;
+    top: px;
+    left: -1.5px;
+    height: calc(100% + 4px);
+    width: calc(100% + 3px);
+    background: var(--gradient-p2);
+    border-radius: 20px;
+    z-index: -1;
+
+    animation: animatedgradient 5s ease alternate infinite;
+    background-size: 200% 200%;
+
+}
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Hover effect to show extra content */
@@ -2020,10 +2100,12 @@ html {
 
 
 .header-section {
+    position: fixed;
 
     top: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 10;
+    padding: 0 .5rem;
     backdrop-filter: blur(10px);
 }
 
@@ -2048,11 +2130,7 @@ html {
     max-width: 265px;
 }
 
-.navbar-custom {
-    position: relative;
-    z-index: 10;
-    /* Higher z-index value ensures it is above other content */
-}
+
 
 
 
@@ -2061,17 +2139,12 @@ html {
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
-    animation: rtt 40s linear infinite;
+    z-index: -1;
     position: absolute;
     right: 0;
     top: 0;
 }
 
-@keyframes rtt {
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 .box {
     z-index: 0;
@@ -2107,16 +2180,7 @@ html {
 }
 
 @media (max-width: 991.98px) {
-    .navbar-custom {
-        position: fixed;
-        width: 100%;
-        /* Make sure the navbar takes full width */
-        top: 0;
-        /* Stick to the top */
-        left: 0;
-        z-index: 10;
 
-    }
 
     /* Make sure the content below the header doesn't go under it */
     .main-content {
@@ -2156,6 +2220,7 @@ html {
     transition: all 1s ease;
 }
 
+
 .header-section .main-navbar .custom-nav .menu-item button,
 .header-section .main-navbar .custom-nav .menu-item a,
 .header-section .main-navbar .custom-nav .menu-link button,
@@ -2181,6 +2246,12 @@ html {
     .header-section .main-navbar .custom-nav {
 
         width: 100%;
+    }
+
+    .custom-nav {
+        background-color: #060919;
+        padding: 1rem 0;
+        border-radius: 20px;
     }
 
     .header-section .main-navbar .custom-nav .sub-menu {
@@ -2536,7 +2607,7 @@ html {
     }
 
     .benefits .single-item .icon-area img {
-        width: 18px;
+        width: 2rem;
     }
 }
 
@@ -2980,4 +3051,26 @@ html {
             rgb(119, 85, 255) 10%,
             rgb(64, 164, 219) 44%,
             rgb(12, 210, 179) 100%);
+}
+
+@media (max-width: 576px) {
+
+    .container-md,
+    .container-sm,
+    .container {
+        max-width: 95%;
+    }
+}
+
+/* Media queries to show the right carousel */
+@media (max-width: 767.98px) {
+    #desktopTestimonialCarousel {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    #mobileTestimonialCarousel {
+        display: none;
+    }
 }

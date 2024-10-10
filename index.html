@@ -26,14 +26,14 @@
     <header class="header-section">
       <!-- top header start -->
 
-      <div class="container-fluid" style="position: fixed">
+      <div class="container-fluid" style="backdrop-filter: blur(5px)">
         <div class="main-navbar">
           <nav class="navbar navbar-expand-lg navbar-custom w-100">
             <div class="container-fluid">
               <!-- Logo for mobile -->
               <a href="index.html" class="navbar-brand d-lg-none">
                 <img
-                  src="./assets/images/Saadiya_dot_dev_Logo.png"
+                  src="assets/images/Saadiya_dot_dev_Logo.png"
                   width="40"
                   alt="logo"
                 />
@@ -100,7 +100,7 @@
 
     <!-- banner section start-->
     <section
-      class="banner-section vh-100 d-flex justify-content-center align-items-center"
+      class="banner-section min-vh-100 d-flex justify-content-center align-items-center"
       id="introduction"
     >
       <div class="gradient_container">
@@ -111,7 +111,7 @@
       </div>
       <div class="container pt-10 my-3">
         <div class="row align-items-center justify-content-center">
-          <div class="col-7 d-grid">
+          <div class="col-12 col-sm-7 d-grid" style="z-index: 1">
             <div class="top-area text-start">
               <div class="head-area">
                 <span class="px-3 px-md-7 py-2 py-md-3 d-inline-block rounded-5"
@@ -121,13 +121,12 @@
               <h4 class="head-gradient mt-3 mt-md-4">
                 Powerful Websites for Growing
               </h4>
-              <div class="container scroll text-start mb-4 mb-md-6 p-0">
+              <div class="scroll text-start mb-4 mb-md-6 p-0">
                 <div class="row scrollrow faded d-none"></div>
                 <div
                   class="row scrollrow focus text-gradient display-six"
                 ></div>
                 <div class="row scrollrow faded d-none"></div>
-                <div class="overlay"></div>
               </div>
               <p class="max-ch m-auto">
                 Hi! I'm Saadiya, I create websites that meet your needs, boost
@@ -141,21 +140,25 @@
               >
                 <a
                   href="#contact"
-                  class="d-center p1-bg-color rounded-5 px-3 px-md-6 py-2 py-md-3 gap-2"
+                  class="gradient-border d-center p1-bg-color rounded-5 px-3 px-md-6 py-2 py-md-3 gap-2"
                 >
-                  <span class="fs-six n1-color fw-mid">Get in Touch</span>
+                  <span class="fs-six text-white px-2 fw-mid"
+                    >Get in Touch</span
+                  >
                 </a>
                 <a
                   href="#prebuilt-demos"
-                  class="d-center p2-bg-color rounded-5 px-3 px-md-6 py-2 py-md-3 gap-2"
+                  class="d-center p1-bg-color rounded-5 px-3 px-md-6 py-2 py-md-3 gap-2"
                 >
-                  <span class="fs-six fw-mid">View Portfolio</span>
+                  <span class="fs-six text-dark px-2 fw-mid"
+                    >View Portfolio</span
+                  >
                 </a>
               </div>
             </div>
           </div>
-          <div class="col-5" style="z-index: 1">
-            <img src="/assets/images/AnimatedIcon.gif" />
+          <div class="col-12 col-sm-5" style="z-index: 1">
+            <img src="assets/images/AnimatedIcon.gif" />
           </div>
         </div>
       </div>
@@ -379,7 +382,7 @@
       >
         <div class="row align-items-center">
           <!-- Left Side: About Me and Counters -->
-          <div class="col-lg-7">
+          <div class="col-lg-7 col-12">
             <h4 class="mb-4 mb-md-6 max-ch">
               About <span class="text-gradient">Me</span>
             </h4>
@@ -395,7 +398,7 @@
             </p>
 
             <div class="row gy-5 gy-xxl-6 justify-content-between mt-5">
-              <div class="col-md-3">
+              <div class="col-6 col-md-3">
                 <div class="single-box text-center">
                   <div class="single-item">
                     <div class="counters d-center justify-content-center">
@@ -410,7 +413,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-6 col-md-3">
                 <div class="single-box text-center">
                   <div class="single-item">
                     <div class="counters d-center justify-content-center">
@@ -425,7 +428,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-6 col-md-3">
                 <div class="single-box text-center">
                   <div class="single-item">
                     <div class="counters d-center justify-content-center">
@@ -440,7 +443,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-6 col-md-3">
                 <div class="single-box text-center">
                   <div class="single-item">
                     <div class="counters d-center justify-content-center">
@@ -459,12 +462,11 @@
           </div>
 
           <!-- Right Side: Image -->
-          <div class="col-lg-5 text-center">
+          <div class="col-lg-5 col-12 text-center">
             <img
-              src="./assets/images/hijabidev.png"
+              class="p-2"
+              src="assets/images/hijabidev.png"
               alt="Saadiya Ambereen Profile"
-              class="img-fluid"
-              style="max-width: 60%"
             />
           </div>
         </div>
@@ -484,16 +486,19 @@
         </div>
       </div>
 
-      <div class="container-fluid position-relative" id="prebuilt-demos">
+      <div
+        class="container-fluid container position-relative"
+        id="prebuilt-demos"
+      >
         <div
           class="row mt-4 mt-md-8 mx-0 mx-md-20 gy-5 gy-xxl-6 justify-content-center filterItems"
         >
-          <div class="col-xl-6 col-md-6 active" data-tag="one">
+          <div class="col-xl-6 col-lg-6 active" data-tag="one">
             <div class="d-block p-2 p-sm-2 p-md-4">
               <div
                 class="card"
                 style="
-                  background-image: url('/assets/images/luphida.jpeg');
+                  background-image: url('assets/images/luphida.jpeg');
                   background-size: cover;
                 "
               >
@@ -507,18 +512,20 @@
                   <div class="badge color2">Web Development</div>
 
                   <div class="buttons">
-                    <button class="btn">View Website</button>
+                    <a class="btn" href="https://luphida.com" target="_blank"
+                      >View Website</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xl-6 col-md-6 active" data-tag="one">
+          <div class="col-xl-6 col-lg-6 active" data-tag="one">
             <div class="d-block p-2 p-sm-2 p-md-4">
               <div
                 class="card"
                 style="
-                  background-image: url('/assets/images/kcbusiness.jpeg');
+                  background-image: url('assets/images/kcbusiness.jpeg');
                   background-size: cover;
                 "
               >
@@ -532,18 +539,20 @@
                   <div class="badge color2">Wordpress Development</div>
 
                   <div class="buttons">
-                    <button class="btn">View Website</button>
+                    <a class="btn" href="https://kcbusiness.net" target="_blank"
+                      >View Website</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xl-6 col-md-6 active" data-tag="one">
+          <div class="col-xl-6 col-lg-6 active" data-tag="one">
             <div class="d-block p-2 p-sm-2 p-md-4">
               <div
                 class="card"
                 style="
-                  background-image: url('/assets/images/minecraft.jpeg');
+                  background-image: url('assets/images/minecraft.jpeg');
                   background-size: cover;
                 "
               >
@@ -557,18 +566,23 @@
                   <div class="badge color2">Web Development</div>
                   <div class="badge color3">Graphic Design</div>
                   <div class="buttons">
-                    <button class="btn">View Website</button>
+                    <a
+                      class="btn"
+                      href="https://saadiyam.github.io/minecraft-finance"
+                      target="_blank"
+                      >View Website</a
+                    >
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="col-xl-6 col-md-6 active" data-tag="one">
+          <div class="col-xl-6 col-lg-6 active" data-tag="one">
             <div class="d-block p-2 p-sm-2 p-md-4">
               <div
                 class="card"
                 style="
-                  background-image: url('/assets/images/suits.jpeg');
+                  background-image: url('assets/images/suits.jpeg');
                   background-size: cover;
                 "
               >
@@ -582,7 +596,9 @@
                   <div class="badge color2">Web Development</div>
                   <div class="badge color3">Graphic Design</div>
                   <div class="buttons">
-                    <button class="btn">View Website</button>
+                    <a class="btn" href="https://backim.biz" target="_blank"
+                      >View Website</a
+                    >
                   </div>
                 </div>
               </div>
@@ -667,31 +683,6 @@
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-4">
-            <div
-              class="d-flex mt-12 mt-lg-0 sec-img align-items-center position-relative"
-            >
-              <img
-                class="max-un"
-                src="assets/images/blogging-circle.png"
-                alt="2Ico2"
-              />
-              <div
-                class="abs-img ms-15 ps-15 d-flex align-items-center position-absolute"
-              >
-                <img
-                  class="max-un"
-                  src="assets/images/blogging-circle-item-1.png"
-                  alt="4Icon3"
-                />
-                <img
-                  class="max-un"
-                  src="assets/images/blogging-circle-item-2.png"
-                  alt="4Icon"
-                />
               </div>
             </div>
           </div>
@@ -798,19 +789,20 @@
         </div>
       </div>
 
+      <!-- Mobile Carousel -->
       <div
-        id="testimonialCarousel"
-        class="carousel slide carousel-fade"
+        id="mobileTestimonialCarousel"
+        class="carousel slide carousel-fade pointer-event d-md-none"
         data-bs-interval="5000"
         data-bs-ride="carousel"
       >
         <div class="container services">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <div class="row gy-5 gy-xxl-6 pb-4">
-                <div class="col-xl-4 col-md-4">
+              <div class="row gy-5">
+                <div class="col-12">
                   <div
-                    class="single-box transition rounded-4 image-vivacity py-4 py-sm-6 py-md-12 px-3 px-sm-5 px-md-8"
+                    class="single-box transition rounded-4 image-vivacity py-4 px-3"
                   >
                     <p>
                       <i
@@ -819,16 +811,18 @@
                       ></i
                       >Saadiya did an amazing job on my website! They were
                       professional, responsive, and delivered a sleek,
-                      user-friendly design that exceeded my expectations. They
-                      handled all my requests quickly and even suggested great
-                      improvements.
+                      user-friendly design that exceeded my expectations.
                     </p>
                     <p class="s1-color">Ahmed Khalil, Luphida</p>
                   </div>
                 </div>
-                <div class="col-xl-4 col-md-4">
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row gy-5">
+                <div class="col-12">
                   <div
-                    class="single-box transition rounded-4 image-vivacity py-4 py-sm-6 py-md-12 px-3 px-sm-5 px-md-8"
+                    class="single-box transition rounded-4 image-vivacity py-4 px-3"
                   >
                     <p>
                       <i
@@ -837,98 +831,19 @@
                       ></i
                       >Worked with Saadiya about creating a custom website for
                       our Legion baseball team. She’s incredibly understanding
-                      and a joy to work with, as well as gave us an outstanding
-                      website we’re looking forward to putting to use this
-                      summer. Truly a very talented individual.
+                      and gave us an outstanding website.
                     </p>
                     <p class="s1-color">Meri Conover, Post 626 Owls</p>
                   </div>
                 </div>
-                <div class="col-xl-4 col-md-4">
-                  <div
-                    class="single-box transition rounded-4 image-vivacity py-4 py-sm-6 py-md-12 px-3 px-sm-5 px-md-8"
-                  >
-                    <p>
-                      <i
-                        class="bi bi-quote text-gradient me-1"
-                        style="font-size: 1.8rem"
-                      ></i
-                      >After one rough sketch and only the second version of the
-                      final design, I was already happy. She is quick to
-                      implement changes and accommodate wishes, it seems like
-                      she has a lot of experience to pull from because the
-                      functionality and design are aces.
-                    </p>
-                    <p class="s1-color">Wagna, The Suits</p>
-                  </div>
-                </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <div class="row gy-5 gy-xxl-6 pb-4">
-                <div class="col-xl-4 col-md-4">
-                  <div
-                    class="single-box transition rounded-4 image-vivacity py-4 py-sm-6 py-md-12 px-3 px-sm-5 px-md-8"
-                  >
-                    <p>
-                      <i
-                        class="bi bi-quote text-gradient me-1"
-                        style="font-size: 1.8rem"
-                      ></i
-                      >I couldn't be happier with the website, it looks
-                      professional and easy to navigate. Saadiya was very easy
-                      to communicate with and was able to work from my portfolio
-                      rather than me needing to design the website myself. I
-                      would highly recommend her to anyone looking for a website
-                      to be made.
-                    </p>
-                    <p class="s1-color">Shreya George, Architect</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                  <div
-                    class="single-box transition rounded-4 image-vivacity py-4 py-sm-6 py-md-12 px-3 px-sm-5 px-md-8"
-                  >
-                    <p>
-                      <i
-                        class="bi bi-quote text-gradient me-1"
-                        style="font-size: 1.8rem"
-                      ></i
-                      >Saadiya does great work! She was professional and
-                      everything looks better than expected. She provided input
-                      but didn't pushy, I feel like it made my website even
-                      better. I hope to work with her again in the future and
-                      plan to recommend her to friends.
-                    </p>
-                    <p class="s1-color">Brittany, KC Services</p>
-                  </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                  <div
-                    class="single-box transition rounded-4 image-vivacity py-4 py-sm-6 py-md-12 px-3 px-sm-5 px-md-8"
-                  >
-                    <p>
-                      <i
-                        class="bi bi-quote text-gradient me-1"
-                        style="font-size: 1.8rem"
-                      ></i
-                      >Saadiya was a pleasure to work for! She designed my
-                      website back when I was starting out and gave it a fresh
-                      revamp a couple years later. She's communicative and was
-                      able to bring my visions to life!
-                    </p>
-                    <p class="s1-color">Sarina, Line Editor and Proofreader</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <!-- Add more carousel items here -->
           </div>
-
-          <!-- Carousel Controls -->
           <button
             class="carousel-control-prev"
             type="button"
-            data-bs-target="#testimonialCarousel"
+            data-bs-target="#mobileTestimonialCarousel"
             data-bs-slide="prev"
           >
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -937,7 +852,91 @@
           <button
             class="carousel-control-next"
             type="button"
-            data-bs-target="#testimonialCarousel"
+            data-bs-target="#mobileTestimonialCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Desktop Carousel -->
+      <div
+        id="desktopTestimonialCarousel"
+        class="carousel slide carousel-fade pointer-event d-none d-md-block"
+        data-bs-interval="5000"
+        data-bs-ride="carousel"
+      >
+        <div class="container services">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row gy-5">
+                <div class="col-md-4">
+                  <div
+                    class="single-box transition rounded-4 image-vivacity py-4 px-3"
+                  >
+                    <p>
+                      <i
+                        class="bi bi-quote text-gradient me-1"
+                        style="font-size: 1.8rem"
+                      ></i
+                      >Saadiya did an amazing job on my website! They were
+                      professional, responsive, and delivered a sleek,
+                      user-friendly design that exceeded my expectations.
+                    </p>
+                    <p class="s1-color">Ahmed Khalil, Luphida</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div
+                    class="single-box transition rounded-4 image-vivacity py-4 px-3"
+                  >
+                    <p>
+                      <i
+                        class="bi bi-quote text-gradient me-1"
+                        style="font-size: 1.8rem"
+                      ></i
+                      >Worked with Saadiya about creating a custom website for
+                      our Legion baseball team. She’s incredibly understanding
+                      and gave us an outstanding website.
+                    </p>
+                    <p class="s1-color">Meri Conover, Post 626 Owls</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div
+                    class="single-box transition rounded-4 image-vivacity py-4 px-3"
+                  >
+                    <p>
+                      <i
+                        class="bi bi-quote text-gradient me-1"
+                        style="font-size: 1.8rem"
+                      ></i
+                      >After one rough sketch and only the second version of the
+                      final design, I was already happy. Quick to implement
+                      changes, and the design is aces.
+                    </p>
+                    <p class="s1-color">Wagna, The Suits</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more carousel items here -->
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#desktopTestimonialCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#desktopTestimonialCarousel"
             data-bs-slide="next"
           >
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -1142,7 +1141,7 @@
                 </div>
 
                 <button
-                  class="box-style box-second first-alt d-center"
+                  class="box-style box-second py-2 px-4 first-alt d-center"
                   type="submit"
                 >
                   Send
