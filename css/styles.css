@@ -1141,20 +1141,20 @@ select {
     transition: ease-in-out;
 }
 
-.gradient-border:after {
 
-    content: '';
-    position: absolute;
-    top: px;
-    left: -1.5px;
-    height: calc(100% + 4px);
-    width: calc(100% + 3px);
-    background: var(--gradient-p2);
-    border-radius: 20px;
-    z-index: -1;
 
-    animation: animatedgradient 5s ease alternate infinite;
-    background-size: 200% 200%;
+   .gradient-border::after {
+  content: '';
+  position: absolute;
+  top: -1.px;
+  left: -1.5px;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+  background: var(--gradient-p2);
+  border-radius: 50px;
+  z-index: -1;
+  animation: animatedgradient 5s ease alternate infinite;
+  background-size: 200% 200%;
 
 }
 
